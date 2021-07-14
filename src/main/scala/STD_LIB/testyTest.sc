@@ -10,3 +10,13 @@ def compound(per: Double, value: Double, time: Double): Double = {
 }
 println(compound(23, 100, 12))
 
+
+
+def sumOfList(lst: List[Int]): Int = {
+  lst match {
+    case Nil => 0
+    case head :: tail => head + sumOfList(tail)
+  }
+}
+
+sumOfList(List(1,2,3,4))
