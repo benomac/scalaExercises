@@ -1,6 +1,5 @@
 def repeatedParameterMethod(x: Int, y: String, z: Any*) = {
   "%d %ss can give you %s".format(x, y, z.mkString(", "))
-  s"$x $y can give you ${z.mkString(", ")}"
 }
 
 val d = repeatedParameterMethod(
@@ -15,7 +14,7 @@ val c = repeatedParameterMethod(
   "egg",
   List("a delicious sandwich", "protein", "high cholesterol"))
 
-List("a delicious sandwich", "protein", "high cholesterol").mkString(", ")
+List("a delicious sandwich", "protein", "high cholesterol")z
 
 
 repeatedParameterMethod(
