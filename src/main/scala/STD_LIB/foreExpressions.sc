@@ -7,12 +7,33 @@ val coordinates = for {
 coordinates(4)
 
 
+
+
+
+
+val serTit = List("\"\"", "string")
+val serNum = List(None, Some("seriesNumber"))
+val epTit = List("\"\"", "string")
+val epNum = List(None, "episodeNumber")
+
+
+val combs =
+  for {
+    i <- serTit
+    j <- serNum
+    k <- epTit
+    l <- epNum
+  } yield(i, j, k, l)
+  combs
+
+
+
 val nums = List(List(1), List(2), List(3), List(4), List(5))
 val result = for {
   numList <- nums
   num <- numList
   if (num % 2 == 0)
-} yield (num)
+} yield num
 
 // Which is the same as
 nums.flatMap(numList => numList).filter(_ % 2 == 0)
